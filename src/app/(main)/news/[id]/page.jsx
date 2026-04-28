@@ -1,7 +1,9 @@
 /** @format */
 import React from "react";
 
-const newsDetails = ({useParams}) => {
+const newsDetails = async ({params}) => {
+  const {id} =  params;
+  console.log(id,"Id");
  
   return (
     <div>
