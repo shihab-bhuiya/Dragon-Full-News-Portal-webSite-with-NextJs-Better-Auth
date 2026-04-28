@@ -1,11 +1,103 @@
 /** @format */
-
+'use client'
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const RegisterPage = () => {
+
+  const { register,handleSubmit,formState: { errors }} = useForm();
+
+  const handleRegisterFun = (data) => {
+
+    console.log(data,"Data");
+
+  }
+
   return (
-    <div>
-      <h1 className="text-center text-4xl mt-5 font-bold">Register Page</h1>
+   <div className="container mx-auto p-10 flex items-center justify-center bg-gray-200">
+      <div className="bg-white w-full max-w-md p-8 rounded-md shadow">
+        <h2 className="text-center text-2xl font-semibold mb-6">
+          Register your account
+        </h2>
+
+        <form className="space-y-4" onSubmit={handleSubmit(handleRegisterFun)}>
+          {/* Name */}
+          <div>
+            <label className="block text-sm mb-1">Your Name</label>
+            <input
+              type="text"
+              {...register("name" ,{required:"name is required"})}
+              placeholder="Enter your name"
+              className="w-full px-3 py-2 border rounded bg-gray-100 focus:outline-none"
+            />
+            {
+              errors.name && <p className="text-red-500">{errors.name.message}</p>
+            }
+            {
+
+            }
+          </div>
+
+          {/* Photo URL */}
+          <div>
+            <label className="block text-sm mb-1">Photo URL</label>
+            <input
+              type="text"
+                {...register("photoURL" ,{required:"photo URL is required"})}
+              placeholder="Enter your photo URL"
+              className="w-full px-3 py-2 border rounded bg-gray-100 focus:outline-none"
+            />
+            {
+              errors.photoURL && <p className="text-red-500">{errors.photoURL.message}</p>
+            }
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm mb-1">Email</label>
+            <input
+              type="email"
+              {...register("email" ,{required:"email is required"})}
+              placeholder="Enter your email address"
+              className="w-full px-3 py-2 border rounded bg-gray-100 focus:outline-none"
+            />
+            {
+              errors.email && <p className="text-red-500">{errors.email.message}</p>
+            }
+          </div>
+
+          {/* Password */}
+          <div>
+            <label className="block text-sm mb-1">Password</label>
+            <input
+              type="password"
+              {...register("password" ,{required:"password is required"})}
+              placeholder="Enter your password"
+              className="w-full px-3 py-2 border rounded bg-gray-100 focus:outline-none"
+            />
+            {
+              errors.password && <p className="text-red-500">{errors.password.message}</p>
+            }
+          </div>
+
+          {/* Terms */}
+          <div className="flex items-center gap-2 text-sm">
+            <input type="checkbox" id="terms" {...register("terms", { required:"you must accept the terms and conditions" })} />
+            <label htmlFor="terms">Accept Terms & Conditions</label>
+            {
+              errors.terms && <p className="text-red-500">{errors.terms.message}</p>
+            }
+          </div>
+
+          {/* Button */}
+          <button
+            type="submit"
+            className="w-full bg-gray-800 text-white py-2 rounded hover:bg-gray-900 transition"
+          >
+            Register
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
