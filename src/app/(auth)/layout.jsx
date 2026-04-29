@@ -4,11 +4,12 @@ import React from 'react';
 
 const authLayout = ({children}) => {
     return (
-        <>
+
+        <div>
      
         <NavBar/>
         {children}
-        </>
+        </div>
     );
 };
 

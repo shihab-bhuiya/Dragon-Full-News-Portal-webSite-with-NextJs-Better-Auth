@@ -1,11 +1,12 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 
 const LoginPage = () => {
+  const [isShowPassword,setIsShowPassowrd] = useState(false);
 
   const {register,handleSubmit,formState:{
     errors
@@ -52,15 +53,17 @@ const LoginPage = () => {
           </div>
 
           {/* Password */}
-          <div>
+          <div className='relative'>
             <label className="block text-xl mb-1">Password</label>
             <input
-              type="password"
+               type={isShowPassword ? "text" : "password"}
               name='password'
               {...register("password",{required:"password is required"})}
               placeholder="Enter your password"
               className="w-full px-3 py-2 border rounded bg-gray-100 focus:outline-none"
             />
+             <span className="absolute right-3 t-8 " onClick={()=> setIsShowPassowrd(!isShowPassword)}>
+              {isShowPassword ? "Hide" :"Show" }</span>
             {
               errors.password && <p className="text-red-500 ">{errors.password.message}</p>
             }
