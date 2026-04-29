@@ -13,6 +13,7 @@
     "@react-login-page/page10": "^1.0.6",
     "better-auth": "^1.6.9",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.4.2",
     "mongodb": "^7.2.0",
     "next": "16.2.4",
     "react": "19.2.4",
