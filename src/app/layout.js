@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/component/shared/Header";
 import NavBar from "@/component/shared/NavBar";
 import Link from "next/link";
+import NavLink from "@/component/shared/NavLink";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,11 +33,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col ${poppins.className}`} >
-        <nav className="flex justify-center gap-5">
-            <Link href="/">Home</Link>
-                <Link href="/login">Login</Link>
-                <Link href="/register">Register</Link>  
-                <Link href="/news">PageDetails</Link>
+        <nav className="flex justify-end m-5 gap-5">
+            <NavLink href="/">Home</NavLink>
+                <NavLink href="/login">Login</NavLink>
+                <NavLink href="/register">Register</NavLink>  
+                <NavLink href="/news">PageDetails</NavLink>
         </nav>
         {/* <Header/> */}
       {/* <NavBar/> */}
