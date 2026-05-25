@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐉 Dragon News Portal
 
-## Getting Started
+Dragon News Portal is a dynamic, full-featured web-based news platform built with **Next.js**. It aggregates real-time news across multiple distinct categories (e.g., National, International, Sports, Entertainment) and provides a secure user experience with a robust authentication system driven by **Better-Auth**.
 
-First, run the development server:
+🔗 **Live Demo:** [Dragon News Portal on Vercel](https://dragon-full-news-portal-web-site-wi.vercel.app/category/01)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Dynamic Category Routing:** Clean client and server-side navigation across segmented news channels using Next.js App/Pages routers.
+- **Secure Authentication:** Integrated with **Better-Auth** for managing seamless registrations, secure session handling, and social/credential logins.
+- **Breaking News Ticker:** Keeps users immediately informed of major rolling headlines.
+- **Responsive Layout:** Beautiful, modern news grid optimized across all devices (Mobile, Tablet, Desktop) using Tailwind CSS.
+- **Server-Side Rendering (SSR) & Performance:** Next-gen asset optimizations for fast data fetching and optimal SEO delivery.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js (React)
+- **Authentication:** Better-Auth
+- **Styling:** Tailwind CSS / PostCSS
+- **State Management & Fetching:** Native React Hooks & Fetch API
+- **Deployment:** Vercel
 
-## Learn More
+## 📦 Installation & Local Setup
 
-To learn more about Next.js, take a look at the following resources:
+Follow these instructions to run the portal on your local development machine:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/shihab-bhuiya/Dragon-Full-News-Portal-webSite-with-NextJs-Better-Auth.git](https://github.com/shihab-bhuiya/Dragon-Full-News-Portal-webSite-with-NextJs-Better-Auth.git)
+   cd Dragon-Full-News-Portal-webSite-with-NextJs-Better-Auth
